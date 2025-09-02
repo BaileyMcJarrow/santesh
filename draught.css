@@ -1,0 +1,10 @@
+body {
+      font-family: Arial, sans-serif;
+            background-color: #f68c0b;
+            margin: 0;
+            padding: 20px;
+}
+.menu-container {
+    background-color: whitesmoke;
+    box-shadow: black 0px 0px 10px;
+}

@@ -19,14 +19,9 @@
     font-size: 30px;
 }
 
-.chips {
-    color:green
+#chips-toggle:checked ~ #chips-content {
+    display: block !important;
 }
-
-#lays {
-    color: black;
-}
-
-.cooldrink {
-    color:orange
+#chips-toggle:not(:checked) ~ #chips-content {
+    display: none !important;
 }
