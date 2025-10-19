@@ -29,7 +29,7 @@ img {
 
 /* Updated Profile Section */
 .profile {
-    padding: 5rem 0;
+    padding: 5rem 15rem;
     display: flex;
     align-items: flex-start;
 }
@@ -41,10 +41,10 @@ img {
 
 .profile-image img {
     border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
+    width: 18rem;
+    height: 18rem;
     object-fit: cover;
-    border: 0.2rem solid #dbdbdb;
+    border: 0.5rem solid green;
 }
 
 .profile-content {
@@ -131,9 +131,9 @@ img {
 /* Gallery Section */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto auto auto;
     gap: 1.5rem;
-    padding: 4rem 0;
+    padding: 4rem 15rem;
 }
 
 .gallery-item {
@@ -182,7 +182,7 @@ img {
     align-items: center;
     font-size: 1.6rem;
     font-weight: 600;
-    margin: 0 1rem;
+    padding: 0 1rem;
 }
 
 /* Loader */
