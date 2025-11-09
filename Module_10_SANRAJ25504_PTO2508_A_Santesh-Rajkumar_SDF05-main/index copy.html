@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!--
+      MAIN FOOTER COMPONENT
+      bg-[#659f8f] = Custom teal background color from the design mockup (looks professional)
+      text-white = All text inside will be white (easy to read on teal)
+      p-8 = 32px padding on all sides (gives breathing room around content)
+    -->
+    <footer class="bg-[#659f8f] text-zinc-700 p-8">
+        
+        <!--
+          CONTAINER WRAPPER
+          mx-auto = Centers everything horizontally (auto margins left and right)
+          grid = Makes this a CSS Grid container (powerful layout system)
+          grid-cols-1 = On mobile, everything stacks in 1 column (simplest layout first)
+          lg:grid-cols-4 = On large screens (1024px+), creates 4 equal columns (desktop layout)
+          gap-6 = 24px space between each grid item (not too tight, not too loose)
+        -->
+        <div class="mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6">
+            
+            <!--
+              SUBSCRIBE SECTION
+              lg:col-span-2 = On large screens, this section spans 2 columns (50% width)
+              This matches the design where the subscribe box is bigger than other sections
+            -->
+            <div class="lg:col-span-2">
+                
+                <!--
+                  MAIN HEADING
+                  text-2xl = Makes text extra large (24px)
+                  font-bold = Makes it bold/strong looking
+                  mb-4 = Adds 16px margin below (space before the form)
+                -->
+                <h2 class="text-2xl font-bold mb-4">Subscribe to our newsletter for updates</h2>
+                
+                <!--
+                  FORM CONTAINER
+                  flex = Turns this into a flex container (items line up in a row)
+                  flex-col = On mobile, items stack vertically (column direction)
+                  sm:flex-row = On small screens+ (640px+), items line up horizontally (row direction)
+                  gap-3 = 12px space between input field and button
+                -->
+                <form class="flex flex-col sm:flex-row gap-3" aria-label="Newsletter subscription form">
+                    
+                    <!--
+                      EMAIL INPUT FIELD
+                      flex-1 = Makes the input grow to fill available space (responsive width)
+                      px-3 = 12px padding left/right (space inside for typing)
+                      py-2 = 8px padding top/bottom (makes it tall enough to click easily)
+                      rounded = Gives it slightly rounded corners (looks modern)
+                      bg-white/20 = Background is white but only 20% visible (semi-transparent effect)
+                      placeholder:text-white/50 = Placeholder text "Email Address" is 50% white (faded look)
+                    -->
+                    <input type="email" placeholder="Email Address" class="px-3 py-2 rounded bg-white placeholder:text-grey/50">
+                    
+                    <!--
+                      SUBSCRIBE BUTTON
+                      bg-white = Solid white background (stands out against teal)
+                      text-[#659f8f] = Text is teal color (matches the footer background)
+                      px-4 = 16px padding left/right (button is wide enough)
+                      py-2 = 8px padding top/bottom (button is tall enough)
+                      rounded = Same rounded corners as input field (consistent design)
+                    -->
+                    <button class="bg-[#d86943] text-white px-4 py-2 rounded">Subscribe</button>
+                </form>
+            </div>
+            
+            <!--
+              QUICK LINKS SECTION
+              This section takes up 1 column automatically (no special span needed)
+            -->
+            <div>
+                
+                <!--
+                  SECTION TITLE
+                  font-bold = Makes it bold
+                  mb-3 = 12px margin below (space before the links)
+                -->
+                <h3 class="font-bold mb-3">Quick Link</h3>
+                
+                <!--
+                  LINKS CONTAINER
+                  space-y-2 = Automatically adds 8px vertical space between each link
+                  No need to add margin to each link individually - Tailwind handles it
+                -->
+                <div class="space-y-2">
+                    <!--
+                      INDIVIDUAL LINK
+                      block = Makes the link take full width (easier to click on mobile)
+                      text-white/80 = Text is white but 80% visible (slightly faded)
+                      hover:text-white = On hover, becomes pure bright white (interactive feedback)
+                    -->
+                    <a href="#" class="block text-white/80 hover:text-white">Home</a>
+                    <a href="#" class="block text-white/80 hover:text-white">Who We Are</a>
+                    <a href="#" class="block text-white/80 hover:text-white">Our Philosophy</a>
+                </div>
+            </div>
+            
+            <!--
+              TECHNOLOGIES SECTION
+              Exact same structure as Quick Links - consistent and simple
+            -->
+            <div>
+                <h3 class="font-bold mb-3">Technologies</h3>
+                <div class="space-y-2">
+                    <a href="#" class="block text-white/80 hover:text-white">HTML</a>
+                    <a href="#" class="block text-white/80 hover:text-white">CSS</a>
+                    <a href="#" class="block text-white/80 hover:text-white">JavaScript</a>
+                </div>
+            </div>
+        </div>
+        
+        <!--
+          DIVIDER LINE (Horizontal Rule)
+          my-6 = 24px margin top and bottom (space away from content)
+          border-2 = 2px thick line (visible but not too chunky)
+          border-[#d86943] = Orange/brown color from the design mockup (matches exactly)
+        -->
+        <hr class="my-6 border-2 border-[#d86943]">
+        
+        <!--
+          LOGO AREA
+          block = Display as block element (takes full width, good for alignment)
+          pt-6 = 24px padding top (space above the logo)
+        -->
+        <a href="https://codespace.co.za" class="block pt-6">
+            <!--
+              LOGO IMAGE
+              h-6 = Height is 24px (appropriate size for a footer logo)
+              w-auto = Width automatically adjusts to maintain aspect ratio
+            -->
+            <img src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="Logo" class="h-6 w-auto">
+        </a>
+    </footer>
+</body>
+</html>
